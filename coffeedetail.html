@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="coffee-detail-wrapper p-2">
+      <h1 class="text-center text-white">Coffee detail</h1>
+      <div id="coffee-detail"></div>
+    </div>
+  </div>
+  
+  <script>
+    function goBack(){
+      window.location.href = "index.html"
+    }
+
+    function getDetailHotCoffeeById(){
+      let text = "<div class='row'>"
+       text = `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+         <div class="card">
+           <img src=${localStorage.getItem("image")} alt="" class="w-100"/>
+           <h2 class="text-center text-primary">${localStorage.getItem("title")}</h2>
+           <span class="text-secondary text-center p-2">${localStorage.getItem("description")}</span>
+           <div class="d-flex justify-content-center">
+             <button class="btn btn-info w-25 m-2" onclick="goBack()">
+               <ion-icon name="arrow-back-outline"></ion-icon>
+             </button>
+             <a class="btn btn-secondary text-white m-2" href="tel:0961847448">
+               <ion-icon name="call-outline"></ion-icon> 0961847448
+             </a>
+           </div>
+         </div>
+       </div>`
+      text += "</div>"
+      document.querySelector("#coffee-detail").innerHTML = text
+    }
+    getDetailHotCoffeeById()
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

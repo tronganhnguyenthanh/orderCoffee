@@ -1,0 +1,48 @@
+body{
+ background-image:url("../images/coffee-beans.avif");
+ background-size:cover; 
+}
+
+.coffee-wrapper{
+  width:100%;
+  height:auto;
+  border:1px solid lightgray;
+  margin:10px;
+}
+
+.coffee-cursor{
+  cursor:pointer;
+}
+
+img{
+ width:683px;
+ height:384px;
+}
+
+.coffee-text{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.form-custom-control:focus{
+  box-shadow:none !important;
+}
+
+.form-custom-control{
+  margin:12px !important;
+  border-radius:30px !important;
+}
+
+.coffee-detail-wrapper{
+  width:50%;
+  height:auto;
+  border:1px solid lightgray;
+  margin:10px;
+  margin-top:1% !important;
+  margin-left:25%;
+}
+
+.icon-inner > .ionicon.s-ion-icon{
+  margin-top:9% !important
+}
