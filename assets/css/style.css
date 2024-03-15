@@ -46,3 +46,23 @@ img{
 .icon-inner > .ionicon.s-ion-icon{
   margin-top:9% !important
 }
+
+@media (max-width: 576px){
+  .coffee-wrapper{
+    width:95%;
+  }
+
+  .coffee-detail-wrapper{
+    width:100%;
+    margin-left:0;
+  }
+
+  .btn.btn-info{
+    width:100% !important;
+  }
+
+  .btn.btn-secondary{
+    width:100% !important;
+    margin-top:2% !important;
+  }
+}

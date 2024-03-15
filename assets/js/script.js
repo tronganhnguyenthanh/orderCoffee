@@ -2,22 +2,8 @@ document.querySelector(".btn.btn-primary").addEventListener("click", function(){
   getHotCoffee()
 })
 
-document.querySelector(".btn.btn-secondary").addEventListener("click", function(){
-  getIcedCoffee()
-})
-
 function getHotCoffee(){
   fetch("https://api.sampleapis.com/coffee/hot")
-   .then(function(res){
-     return res?.json()
-   })
-   .then(function(output){
-     getCoffeeItem(output)
-   })
-}
-
-function getIcedCoffee(){
-  fetch("https://api.sampleapis.com/coffee/iced")
    .then(function(res){
      return res?.json()
    })
@@ -36,22 +22,16 @@ function getHotCoffeeById(id){
    })
  }
 
- function getIcedCoffeeById(id){
-   fetch(`https://api.sampleapis.com/coffee/iced/${id}`)
-   .then(function(res){
-     return res?.json()
-   })
-   .then(function(output){
-     showHotCoffeeDetail(output)
-  })
- }
-
  function showHotCoffeeDetail(output){
    localStorage.setItem("id", output?.id)
    localStorage.setItem("image", output?.image)
    localStorage.setItem("title", output?.title)
    localStorage.setItem("description", output?.description)
-   window.location.href = "coffeedetail.html"
+   window.location.href = "hotCoffeedetail.html"
+ }
+
+ function goForward(){
+   window.location.href = "icedCoffee.html"
  }
 
 function getCoffeeItem(output){
@@ -63,8 +43,12 @@ function getCoffeeItem(output){
           <img src=${i?.image} alt="" class="w-100"/>
           <h2 class="text-center text-primary">${i?.title}</h2>
           <p class="text-center text-secondary coffee-text" title=${i?.description}>${i?.description}</p>
-          <button class="btn btn-info" onclick="getHotCoffeeById(${i?.id})">Hot coffee detail</button>
-          <button class="btn btn-secondary" id="iced-coffee" onclick="getIcedCoffeeById(${i?.id})">Iced coffee detail</button>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-info" onclick="getHotCoffeeById(${i?.id})">Hot coffee detail</button>
+            <button class="btn btn-secondary ml-2" onclick="goForward()">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
         </div>
       </div>
     </div>`
