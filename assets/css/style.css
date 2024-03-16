@@ -104,7 +104,7 @@ img{
   .coffee-wrapper{
     width:95%;
     margin-top:70%;
-    margin-left:-2%
+    margin-left:2%
   }
 
   .coffee-detail-wrapper{
@@ -123,8 +123,18 @@ img{
   }
 
   #iced-coffee-detail{
-    width:70%;
+    width:87%;
     margin:0 auto;
     margin-top:25%;
+  }
+
+  #coffee-detail{
+    width:100%;
+  }
+
+  .responsive-image{
+    width:70% !important;
+    margin:0 auto;
+    padding:15px;
   }
 }
