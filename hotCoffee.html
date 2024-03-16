@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu coffee</title>
+  <title>Coffee Menu</title>
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./assets/images/coffee-logo.avif" type="image/x-icon">
@@ -13,22 +13,26 @@
 </head>
 <body>
   <div class="container">
-    <div class="coffee-iced-wrapper">
-      <h1 class="text-center">Iced Coffee</h1>
-      <div id="iced-coffee"></div>
-      <div class="d-flex justify-content-center">
-        <button class="btn btn-primary" onclick="goBack()">
+    <div class="coffee-hot-wrapper">
+      <h1 class="text-center text-white">Hot coffee</h1>
+      <div id="hot-coffee"></div>
+      <div class="d-flex justify-content-center p-2" id="responsive-website">
+        <button class="btn btn-secondary" onclick="goToHomePage()">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
+        <a href="icedCoffee.html" class="rm-underlined">
+         <p class="text-white font-italic m-2">
+           This is our hot coffee menu, but don't worry, we still have some iced coffee for you to enjoy
+         </p>
+        </a>
       </div>
     </div>
   </div>
-
-  <script src="./assets/js/function.js"></script>
+  <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script>
-    function goBack(){
-      window.location.href = "hotCoffee.html"
+    function goToHomePage(){
+     window.location.href = "index.html"
     }
   </script>
 </body>

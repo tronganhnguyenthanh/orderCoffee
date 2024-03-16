@@ -7,19 +7,21 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./assets/images/coffee-logo.avif" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="coffee-wrapper">
-      <h1 class="text-center text-white">Menu Coffee</h1>
+      <h1 class="text-center text-white font-italic">Explore our menu coffee</h1>
       <div class="p-2 d-flex justify-content-center">
-        <button type="button" class="btn btn-primary m-2">Hot coffee</button>
+        <button type="button" class="btn btn-primary m-2" onclick="redirectToHotCoffeePage()">Hot coffee</button>
+        <button type="button" class="btn btn-secondary m-2" onclick="redirectToIcedCoffeePage()">Iced coffee</button>
       </div>
-      <div id="webpage"></div>
     </div>
   </div>
   
   <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
