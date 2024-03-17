@@ -49,11 +49,3 @@ function getCoffeeItem(output){
    text += "</div>"
    document.querySelector("#hot-coffee").innerHTML = text
 }
-
-function redirectToHotCoffeePage(){
-  window.location.href = "hotCoffee.html"
-}
-
-function redirectToIcedCoffeePage(){
-  window.location.href = "icedCoffee.html"
-}
