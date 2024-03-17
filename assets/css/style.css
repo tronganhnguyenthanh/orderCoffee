@@ -51,6 +51,7 @@ img{
   font-weight:100;
   font-style:normal;
   margin-top:24%;
+  text-shadow:0 0 0 5px blue !important;
 }
 
 .coffee-hot-wrapper > h1{
@@ -104,7 +105,7 @@ img{
   font-size:25px !important;
 }
 
-@media (max-width: 576px){
+@media (max-width:576px){
   .coffee-wrapper{
     width:95%;
     margin-top:70%;
@@ -140,5 +141,54 @@ img{
     width:70% !important;
     margin:0 auto;
     padding:15px;
+  }
+}
+
+@media (max-width:1024px){
+  .responsive-custom-col{
+    max-width:50% !important;
+  }
+
+  .coffee-wrapper{
+    width:95%;
+    margin-top:27%;
+    margin-left:2%
+  }
+
+  .coffee-detail-wrapper{
+    width:100%;
+    margin-left:0
+  }
+
+  #hot-coffee{
+    width:70%;
+    margin:0 auto;
+  }
+
+  #responsive-website{
+    display:flex;
+    flex-direction:column
+  }
+
+  #iced-coffee-detail{
+    width:78%;
+    margin:0 auto;
+    margin-top:25%
+  }
+
+  #coffee-detail{
+    width:79%;
+  }
+
+  .responsive-image{
+    width:50% !important;
+    margin:0 auto;
+    padding:15px
+  }
+
+  .coffee-cursor > h2{
+    font-size:16px;
+    white-space:nowrap;
+    padding:5px;
   }
 }

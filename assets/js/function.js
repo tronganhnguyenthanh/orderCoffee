@@ -28,7 +28,7 @@ function getIcedCoffeeById(id){
 function getCoffeeItem(output){
    let text = "<div class='row p-2'>"
    output.forEach(i => {
-     text += `<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+     text += `<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 responsive-custom-col">
        <div class="card mt-2">
          <div class="coffee-cursor p-2">
            <img src=${i?.image} alt="" class="w-100" onclick="getIcedCoffeeById(${i?.id})"/>
