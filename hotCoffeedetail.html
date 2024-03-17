@@ -31,9 +31,10 @@
              <button class="btn btn-info w-25 m-2 p-2" onclick="goBack()">
                <ion-icon name="arrow-back-outline"></ion-icon>
              </button>
-             <a class="btn btn-secondary text-white m-2 p-2" href="tel:0961847448">
-               <ion-icon name="call-outline"></ion-icon> 0961847448
-             </a>
+             <button class="btn btn-primary w-25 m-2 p-2" onclick="increaseQuantity()">
+                +
+             </button>
+             <span id="qty"></span>
            </div>
          </div>
        </div>`
@@ -41,6 +42,19 @@
       document.querySelector("#coffee-detail").innerHTML = text
     }
     getDetailHotCoffeeById()
+  </script>
+  <script>
+    let qty = 0
+    function increaseQuantity(){
+      qty = qty + 1
+      localStorage.setItem("qty", qty)
+      document.querySelector("#qty").innerHTML = `<span class="text-primary">
+        (${qty})
+        <a href="checkOut.html" class="rm-underlined">
+         <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </span>`
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>

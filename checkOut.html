@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Menu</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/images/coffee-logo.avif" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="coffee-wrapper">
+      <h1 class="text-center text-white font-italic">Payment</h1>
+      <table class="table table-bordered">
+        <thead class="text-center">
+          <tr>
+            <th class="text-white">Id</th>
+            <th class="text-white">Image</th>
+            <th class="text-white">Title</th>
+            <th class="text-white">Quantity</th>
+          </tr>
+         </thead>
+         <tbody id="checkOut-coffee"></tbody>
+       </table>
+    </div>
+  </div>
+
+  <script>
+    let payment = []
+    function addListCheckout(){
+      payment.push({
+       id:localStorage.getItem("id"),
+       image:localStorage.getItem("image"),
+       title:localStorage.getItem("title"),
+       qty:localStorage.getItem("qty")
+      })
+      let row = ""
+       payment.forEach(function(checkOut){
+         row += `<tr>
+           <td class="text-white text-center align-middle">${checkOut?.id}</td>
+           <td class="text-white text-center align-middle">
+             <img src=${checkOut?.image} alt="" class="w-50"/>
+           </td>
+           <td class="text-white text-center align-middle">
+             <p>${checkOut?.title}</p>
+           </td>
+           <td class="text-white text-center align-middle">
+             <p>${checkOut?.qty}</p>
+           </td>
+         </tr>
+         `
+      })
+      document.querySelector("#checkOut-coffee").innerHTML = row
+    }
+
+    function checkOut(){
+      addListCheckout()  
+    }
+    checkOut()
+  </script>
+</body>
+</html>
