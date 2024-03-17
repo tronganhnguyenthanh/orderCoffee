@@ -105,45 +105,6 @@ img{
   font-size:25px !important;
 }
 
-@media (max-width:576px){
-  .coffee-wrapper{
-    width:95%;
-    margin-top:70%;
-    margin-left:2%
-  }
-
-  .coffee-detail-wrapper{
-    width:100%;
-    margin-left:0;
-  }
-
-  #hot-coffee{
-    width:70%;
-    margin:0 auto;
-  }
-
-  #responsive-website{
-    display:flex;
-    flex-direction:column;
-  }
-
-  #iced-coffee-detail{
-    width:87%;
-    margin:0 auto;
-    margin-top:25%;
-  }
-
-  #coffee-detail{
-    width:100%;
-  }
-
-  .responsive-image{
-    width:70% !important;
-    margin:0 auto;
-    padding:15px;
-  }
-}
-
 @media (max-width:1024px){
   .responsive-custom-col{
     max-width:50% !important;
@@ -190,5 +151,44 @@ img{
     font-size:16px;
     white-space:nowrap;
     padding:5px;
+  }
+}
+
+@media (max-width:576px){
+  .coffee-wrapper{
+    width:95%;
+    margin-top:70%;
+    margin-left:2%
+  }
+
+  .coffee-detail-wrapper{
+    width:100%;
+    margin-left:0;
+  }
+
+  #hot-coffee{
+    width:70%;
+    margin:0 auto;
+  }
+
+  #responsive-website{
+    display:flex;
+    flex-direction:column;
+  }
+
+  #iced-coffee-detail{
+    width:87%;
+    margin:0 auto;
+    margin-top:25%;
+  }
+
+  #coffee-detail{
+    width:100%;
+  }
+
+  .responsive-image{
+    width:70% !important;
+    margin:0 auto;
+    padding:15px;
   }
 }
