@@ -16,33 +16,6 @@
   </div>
 
   <script src="./assets/js/function.js"></script>
-  <script>
-    function goBack(){
-      window.location.href = "icedCoffee.html"  
-    }
-
-    function getIcedDetailCoffeeById(){
-      let text = "<div class='row'>"
-       text = `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-         <div class="card">
-           <img src=${localStorage.getItem("image")} alt="" class="w-100 responsive-image"/>
-           <h2 class="text-center text-primary">${localStorage.getItem("title")}</h2>
-           <span class="text-secondary text-center p-2">${localStorage.getItem("description")}</span>
-           <div class="d-flex justify-content-center">
-             <button class="btn btn-info w-25 m-2 p-2" onclick="goBack()">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-             </button>
-             <a class="btn btn-secondary text-white m-2 p-2" href="tel:0961847448">
-               <ion-icon name="call-outline"></ion-icon> 0961847448
-             </a>
-           </div>
-         </div>
-       </div>`
-      text += "</div>"
-      document.querySelector("#iced-coffee-detail").innerHTML = text
-    }
-    getIcedDetailCoffeeById()
-  </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>

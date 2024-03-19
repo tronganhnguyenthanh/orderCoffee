@@ -1,8 +1,3 @@
-// document.querySelector(".btn.btn-secondary").addEventListener("click", function(){
-//   getIcedCoffee()
-// })
-
-
 function getIcedCoffee(){
   fetch("https://api.sampleapis.com/coffee/iced")
    .then(function(res){
@@ -49,3 +44,33 @@ function getCoffeeItem(output){
    localStorage.setItem("description", output?.description)
    window.location.href = "icedCoffeeDetail.html"
 }
+
+function goBack(){
+  window.location.href = "hotCoffee.html"
+}
+
+function goBackToIceCoffeeList(){
+  window.location.href = "icedCoffee.html"
+}
+
+function getIcedDetailCoffeeById(){
+  let text = "<div class='row'>"
+   text = `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <div class="card">
+       <img src=${localStorage.getItem("image")} alt="" class="w-100 responsive-image"/>
+       <h2 class="text-center text-primary">${localStorage.getItem("title")}</h2>
+       <span class="text-secondary text-center p-2">${localStorage.getItem("description")}</span>
+       <div class="d-flex justify-content-center">
+         <button class="btn btn-info w-25 m-2 p-2" onclick="goBackToIceCoffeeList()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+         </button>
+         <a class="btn btn-secondary text-white m-2 p-2" href="tel:0961847448">
+           <ion-icon name="call-outline"></ion-icon> 0961847448
+         </a>
+       </div>
+     </div>
+   </div>`
+  text += "</div>"
+  document.querySelector("#iced-coffee-detail").innerHTML = text
+}
+getIcedDetailCoffeeById()
