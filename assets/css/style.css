@@ -105,6 +105,11 @@ img{
   font-size:25px !important;
 }
 
+.image-list{
+  width:17%;
+  cursor:pointer;
+}
+
 @media (max-width:576px){
   .coffee-wrapper{
     width:95%;
@@ -141,5 +146,9 @@ img{
     width:70% !important;
     margin:0 auto;
     padding:15px;
+  }
+
+  .responsive-none{
+    display:none !important;
   }
 }

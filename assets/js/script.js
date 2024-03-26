@@ -72,5 +72,45 @@ function goToHomePage(){
   window.location.href = "index.html"
 }
 
+function getGridHotCoffee(){
+  let value = document.querySelector("#grid").value
+  if(value === "0"){
+   getHotCoffee()
+  }
+}
+
+function getListHotCoffee(){
+  let value = document.querySelector("#list").value
+  if(value === "1"){
+   getListHotCoffeeItem()
+  }
+}
+
+function getListHotCoffeeItem(){
+  fetch("https://api.sampleapis.com/coffee/hot")
+   .then(function(res){
+     return res?.json() 
+   })
+   .then(function(output){
+     let row = "<div class='row p-2'>"
+      output?.forEach(function(i){
+       row += `<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card mt-2 p-2">
+         <div class="media">
+          <img class="mr-3 image-list" src=${i?.image} alt="Image" onclick="getHotCoffeeById(${i?.id})"/>
+          <div class="media-body mt-4">
+            <h5 class="mt-0 text-secondary">${i?.title}</h5>
+            <p class="text-secondary">${i?.description}</p>
+          </div>
+        </div>
+       </div>
+      </div>
+      `
+     })
+     row += "</div>"
+     document.querySelector("#hot-coffee").innerHTML = row
+   })
+}
+
 getHotCoffee()
 getDetailHotCoffeeById()
