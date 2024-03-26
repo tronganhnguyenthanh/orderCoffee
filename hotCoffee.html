@@ -15,30 +15,24 @@
   <div class="container">
     <div class="coffee-hot-wrapper">
       <h1 class="text-center text-white">Hot coffee</h1>
-      <div class="d-flex justify-content-end responsive-none">
-       <span class="text-white p-2 text-nowrap">
-         <input 
-           type="radio" 
-           value="0" 
-           name="list" 
-           id="grid" 
-           onchange="getGridHotCoffee()"
-           checked
-           class="image-list"
-        />
-         Grid layout
-       </span>
-       <span class="text-white p-2 text-nowrap">
-         <input 
-           type="radio" 
-           value="1" 
-           name="list" 
-           id="list" 
-           onchange="getListHotCoffee()"
-           class="image-list"
-         />
-         List layout
-       </span>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 d-flex responsive-results">
+          <p class="text-white mt-2 ml-2">Results</p>
+          <ul><li></li></ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <div class="d-flex justify-content-end responsive-none">
+            <span class="text-white p-2 text-nowrap">
+              <input type="radio" value="0" name="list" id="grid" onchange="getGridHotCoffee()" checked
+                class="image-list" />
+              Grid layout
+            </span>
+            <span class="text-white p-2 text-nowrap">
+              <input type="radio" value="1" name="list" id="list" onchange="getListHotCoffee()" class="image-list" />
+              List layout
+            </span>
+          </div>
+        </div>
       </div>
       <div id="hot-coffee"></div>
       <div class="d-flex justify-content-center p-2" id="responsive-website">
@@ -46,9 +40,9 @@
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
         <a href="icedCoffee.html" class="rm-underlined">
-         <p class="text-white text-center font-italic m-2">
-           This is our hot coffee menu, but don't worry, we still have some iced coffee for you to enjoy
-         </p>
+          <p class="text-white text-center font-italic m-2">
+            This is our hot coffee menu, but don't worry, we still have some iced coffee for you to enjoy
+          </p>
         </a>
       </div>
     </div>
@@ -56,4 +50,5 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

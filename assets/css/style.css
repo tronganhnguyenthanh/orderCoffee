@@ -110,6 +110,19 @@ img{
   cursor:pointer;
 }
 
+ul{
+ display:flex;
+}
+
+ul > li{
+ list-style-type:none;
+ width:785px;
+ height:1px;
+ border:1px solid lightgray;
+ margin-left:-4%;
+ margin-top:2.7%;
+}
+
 @media (max-width:576px){
   .coffee-wrapper{
     width:95%;
@@ -149,6 +162,10 @@ img{
   }
 
   .responsive-none{
+    display:none !important;
+  }
+
+  .responsive-results{
     display:none !important;
   }
 }
