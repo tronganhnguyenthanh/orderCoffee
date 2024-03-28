@@ -73,4 +73,17 @@ function getIcedDetailCoffeeById(){
   text += "</div>"
   document.querySelector("#iced-coffee-detail").innerHTML = text
 }
+
+function searchByIcedCoffeeTitle(){
+  fetch("https://api.sampleapis.com/coffee/iced")
+  .then(function(res){
+    return res?.json()
+  })
+  .then(function(output){
+    let valueFilter = document.querySelector("#filter").value
+    let filterCoffee = output?.filter((i) => i?.title?.includes(valueFilter))
+    document.querySelector("#filter-results").innerHTML = `<p class="text-right text-white p-4">Show ${filterCoffee?.length} results</p>`
+    getCoffeeItem(filterCoffee)
+  })
+}
 getIcedDetailCoffeeById()

@@ -31,6 +31,7 @@ img{
 .form-custom-control{
   margin:12px !important;
   border-radius:30px !important;
+  width:98% !important;
 }
 
 .coffee-detail-wrapper{

@@ -72,20 +72,6 @@ function goToHomePage(){
   window.location.href = "index.html"
 }
 
-function getGridHotCoffee(){
-  let value = document.querySelector("#grid").value
-  if(value === "0"){
-   getHotCoffee()
-  }
-}
-
-function getListHotCoffee(){
-  let value = document.querySelector("#list").value
-  if(value === "1"){
-   getListHotCoffeeItem()
-  }
-}
-
 function getListHotCoffeeItem(){
   fetch("https://api.sampleapis.com/coffee/hot")
    .then(function(res){
@@ -112,5 +98,17 @@ function getListHotCoffeeItem(){
    })
 }
 
+function searchByHotCoffeeTitle(){
+  fetch("https://api.sampleapis.com/coffee/hot")
+  .then(function(res){
+    return res?.json()
+  })
+  .then(function(output){
+    let valueFilter = document.querySelector("#search").value
+    let filterCoffee = output?.filter((i) => i?.title?.includes(valueFilter))
+    document.querySelector("#results").innerHTML = `<p class="text-right text-white p-4">Show ${filterCoffee?.length} results</p>`
+    getCoffeeItem(filterCoffee)
+  })
+}
 getHotCoffee()
 getDetailHotCoffeeById()
